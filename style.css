@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Sage green background for the empty space outside the centered main container */
+    background-color: #e8ebe5;
+    min-height: 100vh;
+}
+
+/* Custom class for the black and white image effect */
+.grayscale-hover {
+    /* Initially set to grayscale (black and white) */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.grayscale-hover:hover {
+    /* On hover, transition back to full color and scale slightly */
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+.text-sage {
+    /* Custom color for subtle text elements */
+    color: #5d6d7e; 
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt's Architecture Studio</title>
+    <!-- Load Tailwind CSS CDN for utility classes --><script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS embedded here to ensure background color displays in the preview -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Sage green background for the empty space outside the centered main container */
+            background-color: #e8ebe5;
+            min-height: 100vh;
+        }
+
+        /* Custom class for the black and white image effect */
+        .grayscale-hover {
+            /* Initially set to grayscale (black and white) */
+            filter: grayscale(100%);
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+
+        .grayscale-hover:hover {
+            /* On hover, transition back to full color and scale slightly */
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+
+        .text-sage {
+            /* Custom color for subtle text elements */
+            color: #5d6d7e; 
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <!-- Outer container for the full viewport, applying the sage green background --><div class="min-h-screen flex justify-center">
+
+        <!-- Main centered container, limited to ~3/4 screen width (max-w-5xl) --><main class="max-w-5xl w-full bg-white shadow-2xl rounded-xl overflow-hidden">
+
+            <!-- Header Section: Company Name (Now centered) --><header class="p-8 bg-stone-100 border-b border-gray-200 text-center">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-stone-800 tracking-tight">
+                    Matt's Architecture Studio
+                </h1>
+                <p class="mt-2 text-lg text-sage font-medium">Designing environments for flow and harmony.</p>
+            </header>
+
+            <!-- Mission Statement Section --><section class="p-8 border-b border-gray-100">
+                <h2 class="text-2xl font-bold text-stone-700 mb-4">Our Vision</h2>
+                <blockquote class="text-xl italic text-sage border-l-4 border-stone-300 pl-4">
+                    "Working to ensure spaces are designed with people and clients in mind to flow and create a harmonious environment, balancing aesthetic form with genuine human function."
+                </blockquote>
+            </section>
+
+            <!-- Portfolio/Gallery Section (NY Architecture & Blueprint) -->
+            <section class="p-8 border-b border-gray-100">
+                <h2 class="text-2xl font-bold text-stone-700 mb-6">Selected Works & Concepts</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Image 1: B&W NY Architecture -->
+                    <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <!-- UPDATED PATH: Assumes file is in an 'images' folder -->
+                        <img src=0537-0.jpg
+                             class="w-full h-48 object-cover grayscale-hover filter grayscale"
+                             alt="Modern New York Skyscraper Architecture">
+                        <p class="p-3 text-sm font-semibold text-stone-600">Dynamic Midtown Tower (B&W)</p>
+                    </div>
+
+                    <!-- Image 2: Color NY Architecture -->
+                    <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <!-- UPDATED PATH: Assumes file is in an 'images' folder -->
+                        <img src=360_F_269940861_JangKe9bMLUlC4X41mlbEn7U00qS7FaG.jpg
+                             class="w-full h-48 object-cover grayscale-hover"
+                             alt="Colorful facades of New York brownstones">
+                        <p class="p-3 text-sm font-semibold text-stone-600">Brooklyn Brownstone Facades (Color)</p>
+                    </div>
+
+                    <!-- Image 3: Blueprint Concept -->
+                    <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <!-- UPDATED PATH: Assumes file is in an 'images' folder -->
+                        <img src=architecture-interior-man-creative-project-600nw-2488153721.jpg.webp
+                             class="w-full h-48 object-cover hover:opacity-80 transition-opacity duration-300"
+                             alt="Architect working on blueprints and material samples">
+                        <p class="p-3 text-sm font-semibold text-stone-600">Conceptual Design Process</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architect Profile/Background Section --><section class="p-8 bg-stone-50 border-b border-gray-100">
+                <h2 class="text-2xl font-bold text-stone-700 mb-6">About Matt, Principal Architect</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sage">
+                    <div>
+                        <h3 class="text-xl font-semibold text-stone-700 mb-3">Professional Milestones</h3>
+                        <ul class="space-y-3 list-disc list-inside">
+                            <li><span class="font-medium">Published Stories:</span> Featured in 'Architectural Review Monthly' (2022) for sustainable urban design.</li>
+                            <li><span class="font-medium">Awards:</span> 2021 AIA Newcomer Award for Residential Innovation.</li>
+                            <li><span class="font-medium">Education:</span> M.Arch, Columbia University; B.S. in Architecture, Cornell University.</li>
+                            <li><span class="font-medium">Recent Activity:</span> Served as a guest lecturer on Biophilic Design at NYU.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-stone-700 mb-3">Our Design Philosophy</h3>
+                        <p>
+                            Matt believes that great architecture should serve as a quiet backdrop to life, enhancing the daily experience without demanding attention. Our approach is deeply rooted in materials research and client collaboration, ensuring every structure is built to last both aesthetically and structurally.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact/Footer Section --><footer class="p-8 bg-stone-800 text-stone-200">
+                <h2 class="text-xl font-bold mb-4">Get In Touch</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                    <!-- Phone --><div>
+                        <p class="font-semibold text-stone-400">Phone</p>
+                        <p>(555) 123-4567</p>
+                    </div>
+                    <!-- Email --><div>
+                        <p class="font-semibold text-stone-400">Email</p>
+                        <p><a href="mailto:contact@mattsarchitecture.com" class="hover:underline">contact@mattsarchitecture.com</a></p>
+                    </div>
+                    <!-- Address --><div>
+                        <p class="font-semibold text-stone-400">Address</p>
+                        <p>45 Wall Street, Suite 1200, New York, NY 10005</p>
+                    </div>
+                </div>
+                <p class="mt-6 text-xs text-stone-500 text-center">&copy; 2025 Matt's Architecture Studio. All rights reserved.</p>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
+
